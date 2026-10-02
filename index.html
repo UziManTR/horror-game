@@ -1,19 +1,11 @@
 <!doctype html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AFTERHOURS</title><link rel="stylesheet" href="style.css">
-</head>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AFTERHOURS</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<div id="menu">
-  <div class="glitch">AFTERHOURS</div>
-  <p class="sub">THE BUILDING IS EMPTY. IT SHOULDN'T BE.</p>
-  <button id="single">SINGLEPLAYER</button>
-  <button id="multi">MULTIPLAYER</button>
-  <div id="status">SYSTEM READY</div>
-</div>
+<div id="menu"><div class="logo">AFTER<span>HOURS</span></div><div class="tag">THE BUILDING IS EMPTY. IT SHOULDN'T BE.</div>
+<button id="single">SINGLEPLAYER</button><button id="multi">MULTIPLAYER</button>
+<div id="lobby" class="hidden"><input id="roomInput" maxlength="8" placeholder="ROOM CODE"><button id="join">JOIN / CREATE</button></div>
+<div id="status">SYSTEM READY</div></div>
 <canvas id="game"></canvas>
-<div id="hud"><span id="objective">Find the exit.</span><span id="room">OFFLINE</span></div>
-<script src="game.js"></script>
-</body>
-</html>
+<div id="hud"><div><b id="objective">FIND THE EXIT</b><small id="hint">WASD • SHIFT SPRINT • E INTERACT</small></div><div><b id="sanity">SANITY 100%</b><small id="room">SOLO</small></div></div>
+<div id="center"></div><div id="death" class="hidden"><b>IT FOUND YOU.</b><button id="retry">TRY AGAIN</button></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="game.js"></script></body></html>
